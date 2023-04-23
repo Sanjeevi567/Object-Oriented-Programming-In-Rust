@@ -1,50 +1,79 @@
-/******************************************************************************
-
-                            Online Java Compiler.
-                Code, Compile, Run and Debug java program online.
-Write your code in this editor and press "Run" button to execute it.
-
-*******************************************************************************/
 public class Main
 {
 	public static void main(String[] args) {
 		Point pt = new Point();
-		//pt.setX(1.1);
-		//pt.setY(2.2);
-		//pt.setZ(3.3);
-		//Even though it's not memory error since the values are initialiazed to zero
-		//this is shouldn't be allowed without initializing it first with setter methods.
-	    System.out.println(pt.getX());
-	    System.out.println(pt.getY());
-	    System.out.println(pt.getZ());
+	  // pt.setInt(12);
+	   //pt.setDouble(1.0);
+	   //pt.setBool(true);
+	   //pt.setChar('a');
+	   //pt.setIntObject(45);
+	   //pt.setStringObject("Hello");
+		//Even though it's not memory error since the values are initialiazed to their default values
+		//this is shouldn't be allowed without initializing it//first with setter methods.
+		System.out.println(pt.getInt());
+		 System.out.println(pt.getDouble());
+		System.out.println(pt.getBool());
+		System.out.println(pt.getChar());
+		System.out.println(pt.getStringObject());
+		System.out.println(pt.getIntObject());
+		//This line throws an exception since the default values for object type in java is null.
+		System.out.println(pt.charat());
 	}
 }
 class Point {
-    private double x;
-    private double y;
-    private double z;
+    //primitive types
+    private int a;
+    private double b;
+    private boolean c;
+    private char d;
+    
+    //Object types
+    private String e;
+    private Integer f;
 
-    double getX() {
-        return x;
+    void setInt(int a) {
+        this.a = a;
     }
 
-    void setX(double x) {
-        this.x = x;
+    int getInt() {
+        return a;
     }
 
-    double getY() {
-        return y;
+    void setDouble(double b) {
+        this.b = b;
+    }
+    
+    double getDouble() {
+        return b;
     }
 
-    void setY(double y) {
-        this.y = y;
+    void setBool(boolean c) {
+        this.c = c;
     }
 
-    double getZ() {
-        return z;
+    boolean getBool() {
+        return c;
     }
-
-    void setZ(double z) {
-        this.z = z;
+   
+    void setChar(char d){
+        this.d=d;
+    }
+    char getChar(){
+        return d;
+    }
+    void setStringObject(String e){
+        this.e=e;
+    }
+    String getStringObject(){
+        return e;
+    }
+    void setIntObject(Integer f){
+        this.f=f;
+    }
+    Integer getIntObject(){
+        return f;
+    }
+    char charat(){
+        return e.charAt(1);
     }
 }
