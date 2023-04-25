@@ -1,6 +1,6 @@
 fn main() {
     let m = FloatIter::new(1.0, 0.1, 2.0)
-        .into_iter()
+        .into_iter().skip(2)
         //here x is converted to String from float
         .map(|x| format!("{x:.1}"))
         //here x is converted to formatted float from string
